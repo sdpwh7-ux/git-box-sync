@@ -1,0 +1,2 @@
+# secret_scan.sh allowlist: a hit is ignored if the line contains any of these fixed strings (one per line)
+00000000-0000-4000-8000-000000000001

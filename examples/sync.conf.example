@@ -1,0 +1,13 @@
+# git-box-sync config (bash syntax). Copy to sync.conf next to sync.sh, or pass with -c.
+REPO="$HOME/sync/my-box-config"          # a local clone of your (preferably PRIVATE) config repo
+MAP_REPO=(tools skills)                  # top-level directories in the repo ...
+MAP_BOX=("$HOME/tools" "$HOME/agent-skills")   # ... and the box directories they mirror (same order)
+# Optional:
+# RULES="$HOME/git-box-sync/filter.rules"      # rsync allowlist/denylist
+# STATE="$HOME/.local/state/git-box-sync"      # manifest, lock, log
+# LOG="$STATE/sync.log"
+# MAX_SIZE=1m                                  # skip files larger than this
+# REMOTE=origin
+# APPLY_UPSTREAM_DELETES=0
+# NO_PUSH=0                                    # 1 = commit locally only
+# NOTIFY_CMD='notify-send "$TITLE" "$BODY"'    # run (bash -c) when a sync aborts

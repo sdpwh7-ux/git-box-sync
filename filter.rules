@@ -1,0 +1,74 @@
+# rsync filter rules, relative to each mapped box directory. First match wins.
+# Allowlist approach: only text/source files are synced.
+# ---- whole directories ----
+- logs/
+- state/
+- __pycache__/
+- node_modules/
+- .git/
+- .venv/
+- venv/
+- *profile*/
+- *user-data*/
+- Default/
+# ---- runtime state / backups / conflict copies ----
+- *.log
+- *.pid
+- *.bak*
+- *.orig
+- *.upstream
+- *.tmp
+- *.swp
+- *-backup-*
+- backup-*/
+# ---- sensitive files (by name) ----
+- .env
+- .env.*
+- *.env
+- *.pem
+- *.key
+- *.crt
+- *.p12
+- *.pfx
+- key
+- *_key
+- *_key.*
+- *-key.*
+- id_rsa*
+- id_ed25519*
+- *cookie*
+- *cookies*
+- hosts.yml
+- *secret*
+- *credential*
+- *token*
+- *password*
+# ---- add your own excludes here, e.g. ----
+# - /private-notes/
+# - /some-tool/config.json
+# ---- allowlist ----
++ */
++ *.sh
++ *.bash
++ *.py
++ *.js
++ *.mjs
++ *.cjs
++ *.ts
++ *.json
++ *.yaml
++ *.yml
++ *.toml
++ *.md
++ *.txt
++ *.conf
++ *.service
++ *.timer
++ *.plist
++ *.ps1
++ *.html
++ *.css
++ *.ini
++ *.cfg
++ *.rules
+- *
